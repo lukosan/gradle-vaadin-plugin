@@ -48,7 +48,7 @@ class Util {
         FileCollection classpath =
             project.configurations.providedCompile +
                     project.configurations.compile +
-                    project.sourceSets.main.runtimeClasspath +
+            //        project.sourceSets.main.runtimeClasspath +
                     project.sourceSets.main.compileClasspath
 
         Util.getMainSourceSet(project).srcDirs.each {

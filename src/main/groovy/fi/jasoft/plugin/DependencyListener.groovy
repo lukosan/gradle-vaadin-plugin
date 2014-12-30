@@ -137,6 +137,10 @@ class DependencyListener implements ProjectEvaluationListener {
 
             repositories.flatDir(name: 'Gradle Vaadin plugin development repository', dirs: GradleVaadinPlugin.getDebugDir())
         }
+        
+        repositories.each { repository ->
+        	project.logger.lifecycle("Vaadin plugin repository: " + repository)
+        }
     }
 
     private static void createJetty8Configuration(Project project) {
